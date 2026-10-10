@@ -66,9 +66,7 @@ def tester_sort(x):
     selection_sort(arr)
     print(f"Selection took : {time.perf_counter() - start:.6f} seconds")
 
-tester_sort(10000)
-tester_sort(25000)
-tester_sort(50000)
+tester_sort(55000)
 tester_sort(75000)
 tester_sort(100000)
 
