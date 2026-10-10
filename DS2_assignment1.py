@@ -1,6 +1,8 @@
 import random
 import time
+#from numba import njit
 
+# @njit
 def selection_sort(a):
     n=len(a)
     for i in range(n-1):
@@ -12,7 +14,7 @@ def selection_sort(a):
     return a
 
 
-
+# @njit
 def bubble_sort(a):
     n=len(a)
     for i in range(n-1):
@@ -27,7 +29,7 @@ def bubble_sort(a):
 
 
 
-
+# @njit
 def insertion_sort(a):
     n=len(a)
     for i in range(1,n):
@@ -64,8 +66,11 @@ def tester_sort(x):
     selection_sort(arr)
     print(f"Selection took : {time.perf_counter() - start:.6f} seconds")
 
-for i in range(5000,100001,5000):
-    tester_sort(i)
+tester_sort(10000)
+tester_sort(25000)
+tester_sort(50000)
+tester_sort(75000)
+tester_sort(100000)
 
 
 
